@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/CleanBlog.Web/App_Data
+/CleanBlog.Web/bin
+/CleanBlog.Web/obj/Debug
+/CleanBlog.Web/Umbraco
+/packages
