@@ -30,14 +30,7 @@
 <body>
     @Html.Partial("~/Views/Partials/navigation.cshtml")
 
-
-    @{
-        var htmlStringUtilities = new HtmlStringUtilities();
-    }
-    <p>@htmlStringUtilities.Truncate("lorem ipsum dolor sit amet", 20, true, false)</p>
-
-
-@RenderBody()
+    @RenderBody()
     @Html.Partial("~/Views/Partials/footer.cshtml")
     @Html.RenderJsHere()
 </body>

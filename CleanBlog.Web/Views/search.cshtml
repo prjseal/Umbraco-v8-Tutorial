@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Search>
+
+@{
+    Layout = "master.cshtml";
+}
+
+@Html.Partial("~/Views/Partials/pageHeader.cshtml")
+
+<div class="container">
+    <form action="/search/" method="GET" id="search">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="form-group controls">
+                    <input type="text" class="form-control col-xs-6" placeholder="Search for something..." name="q" value="" />
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="form-group">
+                    <button class="btn btn-primary search-button">Search <i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <p>There are no search results</p>
+            </div>
+        </div>
+    </form>
+</div>
