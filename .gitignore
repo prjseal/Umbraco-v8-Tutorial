@@ -8,3 +8,5 @@
 /CleanBlog.Web/obj/Debug
 /CleanBlog.Web/Umbraco
 /packages
+/CleanBlog.Core/bin/Debug
+/CleanBlog.Core/obj/Debug

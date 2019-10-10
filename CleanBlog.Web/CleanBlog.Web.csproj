@@ -463,6 +463,7 @@
     <Content Include="Views\contact.cshtml" />
     <Content Include="Views\search.cshtml" />
     <Content Include="Views\Partials\pageHeader.cshtml" />
+    <Content Include="Views\Partials\Grid\Clean.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -473,6 +474,12 @@
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CleanBlog.Core\CleanBlog.Core.csproj">
+      <Project>{e508ad0f-0e2a-4dde-b0e7-213ff9d8e78e}</Project>
+      <Name>CleanBlog.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
