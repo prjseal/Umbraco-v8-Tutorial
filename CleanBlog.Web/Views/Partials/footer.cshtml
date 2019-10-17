@@ -1,38 +1,36 @@
-﻿@inherits UmbracoViewPage
+﻿@using Umbraco.Web.Models
+@inherits UmbracoViewPage
     
+@{
+    var homePage = Model.AncestorOrSelf<Home>();
+    var socialLinks = homePage.Value<IEnumerable<IPublishedElement>>("socialLinks");
+}
+
 <hr>
 <!-- Footer -->
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <ul class="list-inline text-center">
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+                @if (socialLinks != null && socialLinks.Any())
+                {
+                    <ul class="list-inline text-center">
+                        @foreach (var item in socialLinks)
+                        {
+                            var link = item.Value<Link>("link");
+                            var iconClass = item.Value<string>("iconClass");
+                            <li class="list-inline-item">
+                                <a href="@link.Url" target="@link.Target">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="@iconClass fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                }
+                <p class="copyright text-muted">Copyright &copy; @Umbraco.GetDictionaryValue("Footer.CopyrightName")</p>
             </div>
         </div>
     </div>
