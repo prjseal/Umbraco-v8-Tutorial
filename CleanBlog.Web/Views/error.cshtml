@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Error>
 
+@using CleanBlog.Core.Extensions
+
 @{
     Layout = "master.cshtml";
 }
@@ -8,11 +10,5 @@
 
 <!-- Post Content -->
 <article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <p>Page not found.</p>
-            </div>
-        </div>
-    </div>
+    @Html.GetGridHtml(Model, "mainContent", "Clean", true)
 </article>
