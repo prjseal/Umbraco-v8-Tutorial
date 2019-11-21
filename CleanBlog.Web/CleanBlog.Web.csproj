@@ -425,6 +425,27 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Models\Article.generated.cs" />
+    <Compile Include="App_Data\Models\ArticleControls.generated.cs" />
+    <Compile Include="App_Data\Models\ArticleList.generated.cs" />
+    <Compile Include="App_Data\Models\Contact.generated.cs" />
+    <Compile Include="App_Data\Models\ContactFormControls.generated.cs" />
+    <Compile Include="App_Data\Models\Content.generated.cs" />
+    <Compile Include="App_Data\Models\ContentControls.generated.cs" />
+    <Compile Include="App_Data\Models\Error.generated.cs" />
+    <Compile Include="App_Data\Models\File.generated.cs" />
+    <Compile Include="App_Data\Models\Folder.generated.cs" />
+    <Compile Include="App_Data\Models\FooterControls.generated.cs" />
+    <Compile Include="App_Data\Models\HeaderControls.generated.cs" />
+    <Compile Include="App_Data\Models\Home.generated.cs" />
+    <Compile Include="App_Data\Models\IconLinkItem.generated.cs" />
+    <Compile Include="App_Data\Models\Image.generated.cs" />
+    <Compile Include="App_Data\Models\MainImageControls.generated.cs" />
+    <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\Search.generated.cs" />
+    <Compile Include="App_Data\Models\SEocontrol.generated.cs" />
+    <Compile Include="App_Data\Models\VisibilityControls.generated.cs" />
+    <Compile Include="App_Data\Models\XMlsitemap.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
