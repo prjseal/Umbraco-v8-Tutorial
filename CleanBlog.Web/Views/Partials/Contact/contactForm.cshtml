@@ -1,0 +1,45 @@
+﻿@inherits UmbracoViewPage<ContactViewModel>
+    
+@using CleanBlog.Core.ViewModels
+@using CleanBlog.Core.Controllers
+
+<div id="form-outer">
+    @using (Ajax.BeginForm("SubmitForm", "ContactSurface", new AjaxOptions()
+    {
+        UpdateTargetId = "form-result",
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        OnSuccess = "contactForm.showResult",
+        OnFailure = "contactForm.showResult"
+    }, new { id = "contact-form" }))
+    {
+        @Html.HiddenFor(m => m.ContactFormId)
+
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+                <label>Name</label>
+                @Html.TextBoxFor(m => m.Name, new { @class="form-control", placeholder = "Name..." })
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+                <label>Email Address</label>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email..." })
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Message</label>
+                @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "Message...", rows = "6" })
+                @Html.ValidationMessageFor(m => m.Message)
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary contact-submit" id="sendMessageButton">Send</button>
+        </div>
+    }
+</div>
+<div id="form-result"></div>

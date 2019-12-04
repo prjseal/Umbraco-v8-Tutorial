@@ -420,32 +420,23 @@
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="scripts\contactForm.js" />
+    <None Include="scripts\jquery-1.8.0.intellisense.js" />
+    <Content Include="scripts\jquery-1.8.0.js" />
+    <Content Include="scripts\jquery-1.8.0.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Data\Models\Article.generated.cs" />
-    <Compile Include="App_Data\Models\ArticleControls.generated.cs" />
-    <Compile Include="App_Data\Models\ArticleList.generated.cs" />
-    <Compile Include="App_Data\Models\Contact.generated.cs" />
-    <Compile Include="App_Data\Models\ContactFormControls.generated.cs" />
-    <Compile Include="App_Data\Models\Content.generated.cs" />
-    <Compile Include="App_Data\Models\ContentControls.generated.cs" />
-    <Compile Include="App_Data\Models\Error.generated.cs" />
-    <Compile Include="App_Data\Models\File.generated.cs" />
-    <Compile Include="App_Data\Models\Folder.generated.cs" />
-    <Compile Include="App_Data\Models\FooterControls.generated.cs" />
-    <Compile Include="App_Data\Models\HeaderControls.generated.cs" />
-    <Compile Include="App_Data\Models\Home.generated.cs" />
-    <Compile Include="App_Data\Models\IconLinkItem.generated.cs" />
-    <Compile Include="App_Data\Models\Image.generated.cs" />
-    <Compile Include="App_Data\Models\MainImageControls.generated.cs" />
-    <Compile Include="App_Data\Models\Member.generated.cs" />
-    <Compile Include="App_Data\Models\Search.generated.cs" />
-    <Compile Include="App_Data\Models\SEocontrol.generated.cs" />
-    <Compile Include="App_Data\Models\VisibilityControls.generated.cs" />
-    <Compile Include="App_Data\Models\XMlsitemap.generated.cs" />
+    <Compile Include="App_Data\Models\*.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -487,6 +478,8 @@
     <Content Include="Views\Partials\Grid\Clean.cshtml" />
     <Content Include="Views\error.cshtml" />
     <Content Include="Views\xMLSitemap.cshtml" />
+    <Content Include="Views\Partials\Contact\contactForm.cshtml" />
+    <Content Include="Views\Partials\Contact\result.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
