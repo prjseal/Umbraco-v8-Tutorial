@@ -1,6 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
 
 @using ClientDependency.Core.Mvc
+@using Our.Umbraco.EditLink
 
 @{
     Layout = null;
@@ -24,10 +25,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Clean Blog - Start Bootstrap Theme</title>
-    
+
     @Html.RenderCssHere()
 </head>
 <body>
+    @Html.RenderEditLink(Model)
     @Html.Partial("~/Views/Partials/navigation.cshtml")
 
     @RenderBody()
