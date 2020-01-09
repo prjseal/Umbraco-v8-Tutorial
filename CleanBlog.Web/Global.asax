@@ -1,1 +1,1 @@
-﻿<%@ Application Inherits="Umbraco.Web.UmbracoApplication" Language="C#" %>
+﻿<%@ Application Inherits="CleanBlog.Core.Application.CustomGlobal" Language="C#" %>
