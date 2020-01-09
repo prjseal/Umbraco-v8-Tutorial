@@ -2,8 +2,18 @@
 
 @{
     Layout = "master.cshtml";
+    var leaveMessage = Model.LeaveMessage;
 }
 
 @Html.Partial("~/Views/Partials/pageHeader.cshtml")
 
 @Html.Partial("~/Views/Partials/latestArticles.cshtml")
+
+@section ScriptsBottom
+{
+    <script type="text/javascript">
+        //If you want to set the leave message you can set it from the page you are using it on and then call the init method
+        PDG.leaveMessage = '@leaveMessage';
+        PDG.init();
+    </script>
+}

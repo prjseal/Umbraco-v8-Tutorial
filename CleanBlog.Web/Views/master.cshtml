@@ -15,6 +15,7 @@
     Html.RequiresJs("/vendor/jquery/jquery.min.js");
     Html.RequiresJs("/vendor/bootstrap/js/bootstrap.bundle.min.js");
     Html.RequiresJs("/js/clean-blog.min.js");
+    Html.RequiresJs("/scripts/pleasedontgo.js");
 }
 
 <!DOCTYPE html>
@@ -35,5 +36,6 @@
     @RenderBody()
     @Html.Partial("~/Views/Partials/footer.cshtml")
     @Html.RenderJsHere()
+    @RenderSection("ScriptsBottom", false)
 </body>
 </html>
