@@ -244,9 +244,13 @@
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Helpers\QueryStringHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ArticleService.cs" />
+    <Compile Include="Services\IArticleService.cs" />
     <Compile Include="Services\ISmtpService.cs" />
     <Compile Include="Services\SmtpService.cs" />
+    <Compile Include="ViewModels\ArticleResultSet.cs" />
     <Compile Include="ViewModels\ContactViewModel.cs" />
+    <Compile Include="ViewPages\CleanBlogViewPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
