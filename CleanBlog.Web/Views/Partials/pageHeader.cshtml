@@ -5,10 +5,12 @@
     var subtitle = Model.HasValue("subtitle") ? Model.Value<string>("subtitle") : "";
     var image = Model.Value<IPublishedContent>("mainImage", fallback: Fallback.ToAncestors);
 
+    string smallImageUrl = "";
     string imageUrl = "";
     if (image != null)
     {
-        imageUrl = image.GetCropUrl(1903, 532);
+        smallImageUrl = image.GetCropUrl("PageHeader.Tiny");
+        imageUrl = image.GetCropUrl("PageHeader.Large");
     }
 
     var authorName = Model.HasProperty("authorName") && Model.HasValue("authorName") ? Model.Value<string>("authorName") : "";
@@ -18,7 +20,7 @@
 }
 
 <!-- Page Header -->
-<header class="masthead" style="@(!string.IsNullOrWhiteSpace(imageUrl) ? "background-image: url('" + imageUrl +"')" : null)">
+<header class="masthead lazyload" data-bg="@(!string.IsNullOrWhiteSpace(imageUrl) ? imageUrl : null)" style="@(!string.IsNullOrWhiteSpace(smallImageUrl) ? "background-image: url('" + smallImageUrl +"')" : null)">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">

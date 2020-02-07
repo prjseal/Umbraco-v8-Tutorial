@@ -7,7 +7,7 @@
 
 @Html.Partial("~/Views/Partials/pageHeader.cshtml")
 
-@Html.Partial("~/Views/Partials/latestArticles.cshtml")
+@Html.CachedPartial("~/Views/Partials/latestArticles.cshtml", Model, 3600, true)
 
 @section ScriptsBottom
 {
