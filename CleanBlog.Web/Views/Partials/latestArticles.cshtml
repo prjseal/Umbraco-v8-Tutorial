@@ -18,7 +18,6 @@
                     <div class="post-preview">
                         <a href="@article.Url">
                             <h2 class="post-title">
-                                @DateTime.Now
                                 @(!string.IsNullOrWhiteSpace(article.Title) ? article.Title : article.Name)
                             </h2>
                             @if (!string.IsNullOrWhiteSpace(article.Subtitle))

@@ -33,7 +33,7 @@
 </head>
 <body>
     @Html.RenderEditLink(Model)
-    @Html.Partial("~/Views/Partials/navigation.cshtml")
+    @Html.CachedPartial("~/Views/Partials/navigation.cshtml", Model, 3600, false)
 
     @RenderBody()
     @Html.Partial("~/Views/Partials/footer.cshtml")
